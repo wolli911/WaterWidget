@@ -56,6 +56,7 @@ Script.complete()
 
 // Create the widget
 async function createWidget() {
+ //Hier kann die Überschrift des Widget angepasst werden
  const headlineText = widget.addText("🏊‍♂️ Alz-Seebruck")
  headlineText.font = Font.mediumRoundedSystemFont(14)
  const Text1 = widget.addText(lastmeasure)
@@ -85,6 +86,7 @@ async function createWidget() {
 }
 
 async function fetchData() {
+ //Hier wird die Messstelle beim NID festgelegt
  const url = `https://www.nid.bayern.de/wassertemperatur/inn/seebruck-18403002`
  const request = new Request(url)
  const res = await request.loadString()
@@ -93,6 +95,7 @@ async function fetchData() {
 }
 
 async function fetchWasserstand() {
+ //Hier wird die Messstelle beim HND festgelegt
  const url2 = `https://www.hnd.bayern.de/pegel/inn/seebruck-18403002?addhr=hr_w_hist`
  const request2 = new Request(url2)
  const reswasser = await request2.loadString()
